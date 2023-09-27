@@ -2,9 +2,10 @@ process.env.NODE_ENV = 'test';
 
 let chai = require('chai');
 let chaiHttp = require('chai-http');
-const {expect} = require('chai')
+const {expect} = require('chai');
+require('dotenv').config();
 
-const host = 'https://l956n06prb.execute-api.us-east-1.amazonaws.com/dev' // process.env.DEV_HOST;
+const host = process.env.DEV_HOST;
 
 chai.use(chaiHttp);
 
